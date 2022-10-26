@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <title>Juego del ahorcado</title>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html"><img class="logo" src="logo.png"></a>
+      
+        <div class="d-flex flex-row-reverse bd-highlight">
+        <div class="p-2 bd-highlight">
+         <br>
+          <div class="form-check form-switch" >
+            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" onclick="toggleDarkLight()">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Modo oscuro</label>
+          </div>
+        </div>
+        </div>
+        <div class="alter-container">
+          <img class="alter" src="0.png" />
+        </div>
+      
+        
+        
+       
+  
+        <div class="menu-start">
+          <div class="panel-start">
+            <button class="ingame-button filled" onclick="startGame()">
+              Nuevo Juego
+            </button>
+            <button class="ingame-button blank" onclick="newWord()">
+              Agregar Palabra
+            </button>
+          </div>
+        </div>
+  
+        
+  
+        <div class="secret-word"></div>
+  
+        
+  
+        <p class="already-tried"></p>
+  
+       
+
+        <div class="keyboard">
+          <div>
+            <button class="keyboard-button" onclick="p.attempt('q');disableMe('q')">Q</button>
+            <button class="keyboard-button" onclick="p.attempt('w');disableMe('w')">W</button>
+            <button class="keyboard-button" onclick="p.attempt('e');disableMe('e')">E</button>
+            <button class="keyboard-button" onclick="p.attempt('r');disableMe('r')">R</button>
+            <button class="keyboard-button" onclick="p.attempt('t');disableMe('t')">T</button>
+            <button class="keyboard-button" onclick="p.attempt('y');disableMe('y')">Y</button>
+            <button class="keyboard-button" onclick="p.attempt('u');disableMe('u')">U</button>
+            <button class="keyboard-button" onclick="p.attempt('i');disableMe('i')">I</button>
+            <button class="keyboard-button" onclick="p.attempt('o');disableMe('o')">O</button>
+            <button class="keyboard-button" onclick="p.attempt('p');disableMe('p')">P</button>
+          </div>
+          <div>
+            <button class="keyboard-button" onclick="p.attempt('a');disableMe('a')">A</button>
+            <button class="keyboard-button" onclick="p.attempt('s');disableMe('s')">S</button>
+            <button class="keyboard-button" onclick="p.attempt('d');disableMe('d')">D</button>
+            <button class="keyboard-button" onclick="p.attempt('f');disableMe('f')">F</button>
+            <button class="keyboard-button" onclick="p.attempt('g');disableMe('g')">G</button>
+            <button class="keyboard-button" onclick="p.attempt('h');disableMe('h')">H</button>
+            <button class="keyboard-button" onclick="p.attempt('j');disableMe('j')">J</button>
+            <button class="keyboard-button" onclick="p.attempt('k');disableMe('k')">K</button>
+            <button class="keyboard-button" onclick="p.attempt('l');disableMe('l')">L</button>
+            <button class="keyboard-button" onclick="p.attempt('ñ');disableMe('ñ')">Ñ</button>
+          </div>
+          <div>
+            <button class="keyboard-button" onclick="p.attempt('z');disableMe('z')">Z</button>
+            <button class="keyboard-button" onclick="p.attempt('x');disableMe('x')">X</button>
+            <button class="keyboard-button" onclick="p.attempt('c');disableMe('c')">C</button>
+            <button class="keyboard-button" onclick="p.attempt('v');disableMe('v')">V</button>
+            <button class="keyboard-button" onclick="p.attempt('b');disableMe('b')">B</button>
+            <button class="keyboard-button" onclick="p.attempt('n');disableMe('n')">N</button>
+            <button class="keyboard-button" onclick="p.attempt('m');disableMe('m')">M</button>
+          </div>
+        </div>
+  
+        
+
+        <button class="ingame-button filled" onclick="resetGame()">
+          Nuevo Juego
+        </button>
+        <button class="ingame-button blank" onclick="p.gameOver()">
+          Desistir
+        </button>
+  
+       
+
+  
+        <div class="panel occult"></div>
+      </div>
+  
+      <script src="ahorcado.js"></script>
+      <script src="https://kit.fontawesome.com/32648a8a86.js" crossorigin="anonymous"></script> 
+      <br>
+    </body>
+    
+</body>
+</html>
